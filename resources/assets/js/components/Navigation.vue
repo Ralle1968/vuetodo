@@ -13,8 +13,8 @@
 
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav navbar-right">
-      <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-      <li><a href="#">Create</a></li>
+      <router-link to="/" exact tag='li'><a>Home</a></router-link>
+      <router-link to="/form" tag='li'><a>Create</a></router-link>
     </ul>
   </div>
 </nav>
