@@ -20,7 +20,7 @@
             <div class="row">
                 <my-navbar></my-navbar>
                 <router-link to="/">Home</router-link>
-                <router-link to="/form">Form</router-link>
+                <router-link to="/form">Create</router-link>
                 <router-view></router-view>
             </div>
         </div>
