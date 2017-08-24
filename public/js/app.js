@@ -4020,7 +4020,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -4048,16 +4048,35 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      post: {
+        title: ''
+      }
+    };
+  },
+
+  methods: {
+    addTodo: function addTodo() {
+      var vm = this;
+      axios.post('/api/tasks', vm.post).then(function (response) {
+        console.log(response.data);
+        vm.post.title = '';
+        vm.$router.push('/');
+      });
+    }
+  }
+});
 
 /***/ }),
 /* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "container",
     attrs: {
@@ -4069,19 +4088,41 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "panel panel-default"
   }, [_c('div', {
     staticClass: "panel-body"
+  }, [_c('form', {
+    on: {
+      "submit": function($event) {
+        $event.preventDefault();
+        _vm.addTodo($event)
+      }
+    }
   }, [_c('div', {
     staticClass: "form-group"
   }, [_c('label', {
     attrs: {
       "for": "newTodo"
     }
-  }, [_vm._v("New Todo:")]), _vm._v(" "), _c('input', {
+  }, [_vm._v("New Todo")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.post.title),
+      expression: "post.title"
+    }],
     staticClass: "form-control",
     attrs: {
       "type": "text",
       "id": "newTodo",
       "aria-describedby": "todoHelp",
       "placeholder": "Enter new Todo..."
+    },
+    domProps: {
+      "value": (_vm.post.title)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.post.title = $event.target.value
+      }
     }
   }), _vm._v(" "), _c('small', {
     staticClass: "form-text text-muted",
@@ -4093,8 +4134,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "type": "submit"
     }
-  }, [_vm._v("Submit")])])])])])
-}]}
+  }, [_vm._v("Submit")])])])])])])
+},staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()

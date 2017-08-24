@@ -14,7 +14,7 @@ class TaskController extends Controller
      */
     public function index()
     {
-        return Task::all();
+        return Task::latest()->get();
     }
 
     /**
@@ -35,7 +35,10 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      // $this->validate($request, [
+      //     'title' => 'required'
+      // ]);
+        return Task::create($request->all());
     }
 
     /**
