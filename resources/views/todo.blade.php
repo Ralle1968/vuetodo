@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="{{ asset('img/favicon_todolist.ico') }}">
   <title>Ralfs VueToDo-List</title>
-
+  
   <!-- CSRF Stuff -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <script>window.Laravel = { csrfToken: '{{ csrf_token() }}' }</script>

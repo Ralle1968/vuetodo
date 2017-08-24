@@ -4,30 +4,20 @@
     <div class="panel panel-default">
       <div class="panel-body">
         <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        </div>
-        <div class="form-check">
-          <label class="form-check-label">
-            <input type="checkbox" class="form-check-input">
-            Check me out
-          </label>
+          <label for="newTodo">New Todo:</label>
+          <input type="text" class="form-control" id="newTodo" aria-describedby="todoHelp" placeholder="Enter new Todo...">
+          <small id="todoHelp" class="form-text text-muted">Let's do something important or new...</small>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </div>
     </div>
   </div>
-</div> 
+</div>
 </template>
 
 <script>
     export default {
-       
+
     }
 </script>
 
