@@ -5,7 +5,10 @@
     <div v-if="!loading"class="panel panel-default">
       <div class="panel-body">
         <ul class="list-group">
-          <li class="list-group-item" v-for="task in tasks">{{ task.title }}</li>
+          <li class="list-group-item" v-for="task in tasks">{{ task.title }}
+            <div class="btn pull-right" @click="greet">
+            <i class="fa fa-times"></i>
+          </div></li>
         </ul>
       </div>
     </div>
@@ -31,7 +34,18 @@
        return vm.tasks = response.data;
        //return vm.loading = false;
      });
+    },
+    methods: {
+      greet: function (event) {
+        // `this` inside methods points to the Vue instance
+        alert('Hello !')
+      }
     }
+    // methods:{
+    //   delete(event) {
+    //     console.log("Click auf Delete");
+    //   }
+    // }
   }
 </script>
 
