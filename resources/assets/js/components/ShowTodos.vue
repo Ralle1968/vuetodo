@@ -6,7 +6,7 @@
       <div class="panel-body">
         <ul class="list-group">
           <li class="list-group-item" v-for="task in tasks">
-            <input v-bind:id="task.id" type="checkbox" v-model="task.completed" @click="checkboxToggle(task.id, task.completed)"/>
+            <input v-bind:id="task.id" type="checkbox" v-bind:true-value="1" v-bind:false-value="0" v-model="task.completed" @click="checkboxToggle(task.id, task.completed)"/>
             <label v-bind:for="task.id">{{ task.title }}</label>
             <i class="fa fa-times pull-right" @click="deleteId(task.id, task.title)"></i>
           </li>
@@ -22,6 +22,9 @@
     data() {
       return {
         tasks: [],
+        task:{
+          completed:0
+        },
         loading: false
       }
     },
@@ -50,7 +53,15 @@
         });
       },
       checkboxToggle(taskId, taskCompleted) {
-        alert('TaskID: ' + taskId + ' Completed: ' + taskCompleted);
+        alert(taskId + " " + taskCompleted);
+        var vm = this;
+
+        vm.task.completed = taskCompleted;
+        alert(vm.task);
+        axios.put('/api/tasks/' + taskId, vm.task).then(function(response){
+         console.log(response.data);
+         vm.fetchIt();
+       });
       }
     }
   }
