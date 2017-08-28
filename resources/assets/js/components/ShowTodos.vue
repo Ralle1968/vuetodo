@@ -6,7 +6,7 @@
       <div class="panel-body">
         <ul class="list-group">
           <li class="list-group-item" v-for="task in tasks">
-            <input v-bind:id="task.id" type="checkbox" v-model="task.completed" @click="checkboxToggle(task.completed)"/>
+            <input v-bind:id="task.id" type="checkbox" v-model="task.completed" @click="checkboxToggle(task.id, task.completed)"/>
             <label v-bind:for="task.id">{{ task.title }}</label>
             <i class="fa fa-times pull-right" @click="deleteId(task.id, task.title)"></i>
           </li>
@@ -49,8 +49,8 @@
          return vm.tasks = response.data;
         });
       },
-      checkboxToggle(taskCompleted) {
-        alert(taskCompleted);
+      checkboxToggle(taskId, taskCompleted) {
+        alert('TaskID: ' + taskId + ' Completed: ' + taskCompleted);
       }
     }
   }
@@ -70,5 +70,7 @@
 
   input[type=checkbox]:checked + label:before { content: "\f046"; } /* checked icon */
   input[type=checkbox]:checked + label:before { letter-spacing: 5px; } /* allow space for check mark */
-
+  .panel-body label {
+    font-weight: normal;
+  }
 </style>
