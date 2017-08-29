@@ -3406,7 +3406,7 @@ var Component = __webpack_require__(3)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "C:\\Users\\FES\\Desktop\\Laravel\\Laravel5_4\\todovue\\resources\\assets\\js\\components\\ShowTodos.vue"
+Component.options.__file = "C:\\Users\\graefr\\Desktop\\Programmierung\\Laravel5_4\\vuetodo\\resources\\assets\\js\\components\\ShowTodos.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] ShowTodos.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -3417,9 +3417,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-c15b6010", Component.options)
+    hotAPI.createRecord("data-v-5ca4702c", Component.options)
   } else {
-    hotAPI.reload("data-v-c15b6010", Component.options)
+    hotAPI.reload("data-v-5ca4702c", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -3802,13 +3802,13 @@ var content = __webpack_require__(17);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("bfa38290", content, false);
+var update = __webpack_require__(2)("35acda22", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-c15b6010\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./ShowTodos.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-c15b6010\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./ShowTodos.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-5ca4702c\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./ShowTodos.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-5ca4702c\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./ShowTodos.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -3826,7 +3826,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*** custom checkboxes ***/\ninput[type=checkbox] { display:none;\n} /* to hide the checkbox itself */\ninput[type=checkbox] + label:before {\nfont-family: FontAwesome;\ndisplay: inline-block;\n}\ninput[type=checkbox] + label:before { content: \"\\F096\";\n} /* unchecked icon */\ninput[type=checkbox] + label:before { letter-spacing: 10px;\n} /* space between checkbox and label */\ninput[type=checkbox]:checked + label:before { content: \"\\F046\";\n} /* checked icon */\ninput[type=checkbox]:checked + label:before { letter-spacing: 5px;\n} /* allow space for check mark */\n.panel-body label {\n  font-weight: normal;\n}\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*** custom checkboxes ***/\ninput[type=checkbox] { display:none;\n} /* to hide the checkbox itself */\ninput[type=checkbox] + label:before {\nfont-family: FontAwesome;\ndisplay: inline-block;\n}\ninput[type=checkbox] + label:before { content: \"\\F096\";\n} /* unchecked icon */\ninput[type=checkbox] + label:before { letter-spacing: 10px;\n} /* space between checkbox and label */\ninput[type=checkbox]:checked + label:before { content: \"\\F046\";\n} /* checked icon */\ninput[type=checkbox]:checked + label:before { letter-spacing: 5px;\n} /* allow space for check mark */\n.panel-body label {\n  font-weight: normal;\n}\n.panel-body label.disabled {\n  cursor: default;\n  text-decoration: line-through;\n}\n", ""]);
 
 // exports
 
@@ -3999,6 +3999,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         }
       }
     }), _vm._v(" "), _c('label', {
+      class: {
+        'disabled': task.completed
+      },
       attrs: {
         "for": task.id
       }
@@ -4016,7 +4019,7 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-c15b6010", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-5ca4702c", module.exports)
   }
 }
 
@@ -4041,7 +4044,7 @@ var Component = __webpack_require__(3)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "C:\\Users\\FES\\Desktop\\Laravel\\Laravel5_4\\todovue\\resources\\assets\\js\\components\\Form.vue"
+Component.options.__file = "C:\\Users\\graefr\\Desktop\\Programmierung\\Laravel5_4\\vuetodo\\resources\\assets\\js\\components\\Form.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Form.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -4052,9 +4055,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-7a57adec", Component.options)
+    hotAPI.createRecord("data-v-39d18590", Component.options)
   } else {
-    hotAPI.reload("data-v-7a57adec", Component.options)
+    hotAPI.reload("data-v-39d18590", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -4075,13 +4078,13 @@ var content = __webpack_require__(23);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("249361af", content, false);
+var update = __webpack_require__(2)("6a7e4395", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7a57adec\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Form.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7a57adec\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Form.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-39d18590\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Form.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-39d18590\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Form.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -4257,7 +4260,7 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-7a57adec", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-39d18590", module.exports)
   }
 }
 
@@ -45262,7 +45265,7 @@ var Component = __webpack_require__(3)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "C:\\Users\\FES\\Desktop\\Laravel\\Laravel5_4\\todovue\\resources\\assets\\js\\components\\Navigation.vue"
+Component.options.__file = "C:\\Users\\graefr\\Desktop\\Programmierung\\Laravel5_4\\vuetodo\\resources\\assets\\js\\components\\Navigation.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Navigation.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -45273,9 +45276,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-9f485188", Component.options)
+    hotAPI.createRecord("data-v-c56484f0", Component.options)
   } else {
-    hotAPI.reload("data-v-9f485188", Component.options)
+    hotAPI.reload("data-v-c56484f0", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -45296,13 +45299,13 @@ var content = __webpack_require__(54);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("a8a94fc2", content, false);
+var update = __webpack_require__(2)("39932db6", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-9f485188\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Navigation.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-9f485188\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Navigation.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-c56484f0\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Navigation.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-c56484f0\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Navigation.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -45417,7 +45420,7 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-9f485188", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-c56484f0", module.exports)
   }
 }
 

@@ -7,7 +7,7 @@
         <ul class="list-group">
           <li class="list-group-item" v-for="task in tasks">
             <input v-bind:id="task.id" type="checkbox" v-bind:true-value="1" v-bind:false-value="0" v-model="task.completed" @click="checkboxToggle(task.id, task.completed)"/>
-            <label v-bind:for="task.id">{{ task.title }}</label>
+            <label v-bind:for="task.id" :class="{'disabled' : task.completed}">{{ task.title }}</label>
             <i class="fa fa-times pull-right" @click="deleteId(task.id, task.title)"></i>
           </li>
         </ul>
@@ -83,5 +83,9 @@
   input[type=checkbox]:checked + label:before { letter-spacing: 5px; } /* allow space for check mark */
   .panel-body label {
     font-weight: normal;
+  }
+  .panel-body label.disabled {
+    cursor: default;
+    text-decoration: line-through;
   }
 </style>
