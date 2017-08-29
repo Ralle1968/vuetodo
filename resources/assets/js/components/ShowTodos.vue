@@ -1,8 +1,8 @@
 <template>
 <div id="showTasks" class="container">
   <div class="col-md-6 col-md-offset-3">
-    <i v-if="loading" class="fa fa-spinner fa-spin fa-3x fa-fw center-block"></i>
-    <div v-if="!loading"class="panel panel-default">
+    <!-- <i v-if="loading" class="fa fa-spinner fa-spin fa-3x fa-fw center-block"></i> -->
+    <div class="panel panel-default">
       <div class="panel-body">
         <ul class="list-group">
           <li class="list-group-item" v-for="task in tasks">
