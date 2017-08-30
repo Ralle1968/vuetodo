@@ -2,12 +2,14 @@
 
 namespace App;
 
+
 use Illuminate\Database\Eloquent\Model;
 
 class Task extends Model
 {
     protected $fillable = [
-        'id', 'title', 'completed',
+        'id', 'title', 'completed', "created_at"
     ];
+  
 
 }

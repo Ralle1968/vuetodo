@@ -38,6 +38,7 @@ class TaskController extends Controller
       // $this->validate($request, [
       //     'title' => 'required'
       // ]);
+
         return Task::create($request->all());
     }
 
@@ -73,7 +74,6 @@ class TaskController extends Controller
     public function update(Request $request, Task $task)
     {
         $task->update($request->all());
-        return $task->completed;
     }
 
     /**
