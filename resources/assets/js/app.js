@@ -8,6 +8,9 @@ import router from './routes.js';
 require('./bootstrap');
 
 window.Vue = require('vue');
+
+
+
 import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
@@ -24,5 +27,6 @@ Vue.component('my-show', require('./components/ShowTodos.vue'));
 
 const app = new Vue({
     el: '#app',
-    router
-});
+    router,
+    
+  });

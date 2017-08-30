@@ -10,7 +10,7 @@
             <label v-bind:for="task.id" :class="{'disabled' : task.completed}">{{ task.title }}</label>
             <i class="fa fa-times pull-right" @click="deleteId(task.id, task.title)"></i>
             <br>
-            <small><label v-bind:for="task.id" :class="{'disabled' : task.completed}">{{ task.created_at }}</label></small>
+            <small><label v-bind:for="task.id" :class="{'disabled' : task.completed}">{{ task.createdHumanReadable }}</label></small>
           </li>
         </ul>
       </div>
@@ -34,6 +34,7 @@
     created() {
       this.fetchIt();
     },
+
     methods: {
       deleteId(taskId, taskTitle) {
         let ok= confirm('Are you sure to delete "' + taskTitle + '" ?');
