@@ -8,7 +8,7 @@
       <span class="icon-bar"></span>
     </button>
     <img src="img/todo.png" alt="Dispute Bills">
-    <a class="navbar-brand">Ralfs VueToDo-List</a>
+    <a class="navbar-brand">Ralfs VueToDo-Lister</a>
   </div>
 
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
