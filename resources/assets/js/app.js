@@ -24,9 +24,9 @@ Vue.use(VueRouter)
 Vue.component('my-navbar', require('./components/Navigation.vue'));
 //Vue.component('my-form', require('./components/Form.vue'));
 Vue.component('my-show', require('./components/ShowTodos.vue'));
-
+Vue.component('my-side', require('./components/Sidenav.vue'));
 const app = new Vue({
     el: '#app',
     router,
-    
+
   });
