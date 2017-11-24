@@ -6,7 +6,7 @@
       <div class="panel-body">
         <ul class="list-group">
           <li class="list-group-item" v-for="task in tasks">
-            <input v-bind:id="task.id" type="checkbox" v-bind:true-value="1" v-bind:false-value="0" v-model="task.completed" @click="checkboxToggle(task.id, task.completed)"/>
+            <input v-bind:id="task.id" type="checkbox" v-model="task.completed" @click="checkboxToggle(task.id, task.completed)"/>
             <label v-bind:for="task.id" :class="{'disabled' : task.completed}">{{ task.title }}</label>
             <i class="fa fa-times pull-right" @click="deleteId(task.id, task.title)"></i>
             <br>
@@ -41,7 +41,7 @@
         if(ok){
           var vm = this;
           axios.delete('/api/tasks/' + taskId ).then(function(response){
-           console.log(response);
+          //  console.log(response);
            vm.fetchIt();
          });
         }
@@ -50,16 +50,23 @@
         var vm = this;
         this.loading = true;
         axios.get('/api/tasks').then(function(response){
-         console.log(response.data);
+        //  console.log(response.data);
          vm.loading=false;
          return vm.tasks = response.data;
         });
       },
       checkboxToggle(taskId, taskCompleted) {
+        console.log(taskCompleted);
+        if (taskCompleted==0){
+          taskCompleted=1;
+        } else {
+          taskCompleted=0;
+        }
+        console.log(taskCompleted);
         var vm = this;
         vm.task.completed = taskCompleted;
         axios.put('/api/tasks/' + taskId, vm.task).then(function(response){
-         console.log(response.data);
+        //  console.log(response.data);
          vm.fetchIt();
        });
       }

@@ -41,7 +41,7 @@
         addTodo(){
           var vm = this;
           axios.post('/api/tasks', vm.tasks).then(function(response){
-           console.log(response.data);
+          //  console.log(response.data);
            vm.tasks.title='';
            vm.$router.push('/');
           });
